@@ -2,7 +2,7 @@ package dna;
 
 public class RecordFormatException extends Exception
 {
-	// Complete this.
+	// new exception 
 	public RecordFormatException(String message) {
 		super(message);
 	}
