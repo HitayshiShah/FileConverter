@@ -16,8 +16,7 @@ public class FastaWriter
 		thePrintWriter = pw;
 	}
 	
-	// Write the rec as 2 separate lines: first the defline, then the sequence.
-	// To write something on a separate line, use the println() method of PrintWriter.
+	// writes the two lines from another file
 	public void writeRecord(FastaRecord rec) throws IOException
 	{
 		thePrintWriter.println(rec.getDefline());
