@@ -14,26 +14,21 @@ public class FileConverter
 		fasta = a;
 	}
 	//
-	// Writes a fasta file consisting of conversion of all records from the fastq with
-	// sufficient quality and unique defline.	
-	//
-	// This method only throws IOException. Other exceptions throws by the code should
-	// be handled inside the method, using try/catch.
-	//
+	// converts the fastq file to the fasta file
 	//
 	public void convert() throws IOException
 	{
-		// Build chain of readers for reading fast records from the fastq file.
+		// Builds chain of readers for reading fast records from the fastq file.
 		FileReader fr = new FileReader(fastq);
 		BufferedReader br = new BufferedReader(fr);
 		FastqReader fqr = new FastqReader(br);
 
-		// Build chain of writers for writing fasta records to the fasta file.
+		// Builds chain of writers for writing fasta records to the fasta file.
 		FileWriter fw = new FileWriter(fasta);
 		PrintWriter pw = new PrintWriter(fw);
 		FastaWriter faw = new FastaWriter(pw);
 		
-		// Read, translate, write.
+		// Reads, translates, and writes the file.
 		boolean done = false;
 		while (!done) {
 
