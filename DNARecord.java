@@ -2,10 +2,7 @@ package dna;
 
 
 //
-// FastqRecord and FastaRecord should implement this.
-//
-// Remember that in implementing classes, the interface
-// method have to be public.
+// methods that the filereader classes will implement
 //
 
 
