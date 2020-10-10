@@ -21,14 +21,13 @@ public class FastqReader
 	// Returns next record in the file, or null if EOF (end-of-file).
 	public FastqRecord readRecord() throws IOException, RecordFormatException
 	{
-		// Read the defline from the BufferedReader. Return null if you read null, 
-		// indicating end of file.
+		// Reads the defline from the BufferedReader.
 		String defline = theBufferedReader.readLine();
 		if (defline == null) {
 			return null;
 		}
 
-		// Read the next 3 lines from the buffered reader. Construct and return
+		// Read the next 3 lines from the buffered reader. Constructs and returns
 		// a FastqRecord.
 		String sequence = theBufferedReader.readLine();
 		String plus = theBufferedReader.readLine();
